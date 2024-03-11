@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">	
+		$(document).ready(function(){
+			$('#SignUp').submit(test())
+		});
+		
+		
+		
+		function test(){
+		contraseña = $('#contraseña').val();
+		repetirContrseña = $('#repetirContraseña').val();
+			
+			if(contraeña != repetirContraseña){
+				alert("Las contrasñas no coinciden");
+				$('#contraseña').value("");
+				$('#repetirContraseña').value("");
+			}
+		}	
+	
+</script>
+</head>
+<body>
+	<form  id="SignUp" >
+		Nombre: <input type="text" minlength="4" maxlength="20"> <br> 
+		Apellido: <input type="text" minlength="4" maxlength="40"> <br>
+		Fecha de nacimiento: <input type="date"> <br>
+		Telefono <input type="number" maxlength="9"> <br>
+		DNI <input type="text" maxlength="9"> <br>
+		Sexo <select id="genero" name="genero" >
+			<option value="hombre">Seleccione</option>
+    		<option value="hombr">Hombre</option>
+    		<option value="mujer">Mujer</option>
+    		<option value="otro">Otro</option>
+		</select><br>
+		
+		Email <input type="email"> <br>
+		idUsuario <input type="text" maxlength="20"> <br>
+		Contraseña <input  id="contraseña" type="text" maxlength="12"> <br>
+		Repetir contraseña <input id="repetirContraseña" type="text" maxlength="12"> <br>
+		<select id="seleccion" nmae="SeleccionRol" size="2" multiple>
+			<option value="usuario"> Usuario </option>
+			<option value="administrador"> Administrador</option>
+			 
+		</select>
+		<br> <input type="submit" value="Enviar datos">
+	</form>
+</body>
+</html>
